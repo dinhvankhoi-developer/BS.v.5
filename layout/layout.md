@@ -26,3 +26,7 @@
    --trái => float-left
    --phải => float-right
    --center => d-block mx-auto
+
+6.gutters (máng xối) :
+-- để sử dụng máng xối : phải xác định có nhiêu cột trong 1 hàng (row) . rồi dùng máng xối (g-\*)
+--(g-\*) được đặt ở trong row , và mỗi cột phải có thẻ div chứa nội dung .
