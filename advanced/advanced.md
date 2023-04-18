@@ -18,3 +18,6 @@
 4. visually-hidden :
    -- dùng để ẩn nội dung .
    -- có thể dùng d-[responsive]-none để ẩn tuỳ theo điểm ngắt phương tiện .
+
+5. truncate :
+   -- truncate là chỉ dùng để ẩn nội dung với độ dài mong muốn
