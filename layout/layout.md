@@ -15,3 +15,8 @@
 
 3. hệ thống gird trong bootstrap:
    -- khi chia layout dùng col-5 (số cột được chia theo điểm breakpoint) sau khi co nội dung lại dễ vỡ nội dung , cho nên thiết lập điểm ngắt cho điểm breakpoint
+
+4. offset :
+   --là tăng khoảng cách bên phải , trái tuỳ thuộc vào item
+   cách sử dụng offset như sau :
+   --offset là bên trong cột (col)
