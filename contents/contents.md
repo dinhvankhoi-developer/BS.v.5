@@ -11,3 +11,6 @@
    --text-justify
    --text-nowrap
    --display (phạm vi 1- 6 cũng cũng như h1- h6)
+
+2. Blockquotes :
+   -- mô tả nội dung của 1 tác giả nào đó .
