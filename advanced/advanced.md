@@ -11,3 +11,6 @@
    -- nâng cao :
    positions: relative , absolute
    vị trí set như sau:0 - 50 - 100 , translate-middle , translate-middle-x , translate-middle-y
+
+3. hstack & vstack :
+   -- hstack & vstack là chỉ dịnh nội dung được chỉnh theo chiều nào , hstack là nang , vstack là dọc , class .vr là tạo 1 đường vân khoảng cách giữa item !
