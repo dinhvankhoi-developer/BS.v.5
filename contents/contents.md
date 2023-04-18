@@ -10,4 +10,4 @@
    --text-right
    --text-justify
    --text-nowrap
-   --display
+   --display (phạm vi 1- 6 cũng cũng như h1- h6)
