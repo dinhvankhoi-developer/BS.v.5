@@ -20,3 +20,9 @@
    --là tăng khoảng cách bên phải , trái tuỳ thuộc vào item
    cách sử dụng offset như sau :
    --offset là bên trong cột (col)
+
+5. clearfix :
+   --là thuộc tính xác định nội dung được căn chỉnh bên trái , phải , center
+   --trái => float-left
+   --phải => float-right
+   --center => d-block mx-auto
