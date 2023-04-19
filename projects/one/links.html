@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Title</title>
+    <style>
+      .vr {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand text-uppercase fw-bold text-danger" href="#"
+            >ems2.0</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse text-capitalize"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./dash.html"
+                  >home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">employees data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./links.html">employees jobs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./links.html">employees link</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <div class="hstack gap-3">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-success" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+                <div class="vr"></div>
+                <a href="./login.html" class="btn btn-danger">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-power"
+                    viewBox="0 0 16 16"
+                  >
+                    <path d="M7.5 1v7h1V1h-1z" />
+                    <path
+                      d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container-fluid">
+        <div class="row mt-5">
+          <div class="col-sm-4 col-md-3">
+            <div class="list-group shadow-lg text-capitalize text-center">
+              <a
+                href="#details"
+                class="list-group-item list-group-item-action active"
+                aria-current="true"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal_details"
+              >
+                links data
+              </a>
+              <a
+                href="#"
+                class="list-group-item list-group-item-action"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal_edit"
+                >add list</a
+              >
+              <!-- edit -->
+              <a
+                href="#"
+                class="list-group-item list-group-item-action"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal_edit"
+                >edit list</a
+              >
+            </div>
+            <div class="list-group mt-3 shadow-lg text-center text-capitalize">
+              <a
+                href="#"
+                class="list-group-item list-group-item-action active"
+                aria-current="true"
+              >
+                related employees
+              </a>
+              <a href="#" class="list-group-item list-group-item-action"
+                >employees</a
+              >
+            </div>
+          </div>
+          <div class="col-sm-8 col-md-9">
+            <div class="card">
+              <div
+                class="card-header bg-secondary text-capitalize text-center text-white fw-bold"
+              >
+                list employees data
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table
+                class="table table-striped table-hover table-bordered table-info align-middle text-center"
+              >
+                <thead class="table-light text-capitalize">
+                  <!-- <caption>id</caption> -->
+                  <tr>
+                    <th>id</th>
+                    <th>name</th>
+                    <th>email</th>
+
+                    <th>details</th>
+                    <th>edit</th>
+                    <th>delete</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                  <tr class="table-primary">
+                    <td scope="row">1</td>
+                    <td>andrew</td>
+                    <td>andrew@gmail.com</td>
+                    <td>
+                      <a
+                        id="details"
+                        href="#"
+                        class="btn text-capitalize btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal_details"
+                        >details</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        id="edit"
+                        href="#"
+                        class="btn text-capitalize btn-warning"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal_edit"
+                        >edit</a
+                      >
+                    </td>
+                    <td>
+                      <a
+                        id="delete"
+                        href="#"
+                        class="btn text-capitalize btn-danger"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal_delete"
+                        >delete</a
+                      >
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- !modal khi click details -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal_details"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div
+            class="modal-header bg-primary text-capitalize text-center text-white"
+          >
+            <h5 class="modal-title" id="exampleModalLabel">
+              Thông tin chi tiết của người dùng
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <table
+              class="table table-primary table-hover table-bordered table-sm table-responsive"
+            >
+              <tbody>
+                <tr>
+                  <th>id</th>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th>name</th>
+                  <td>andrew</td>
+                </tr>
+                <tr>
+                  <th>email</th>
+                  <td>andrew@gmail.com</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !modal khi click details -->
+
+    <!-- ! chỉnh sửa thông tin nội dung -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal_edit"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-warning fw-bold text-white">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Chỉnh sửa thông tin cá nhân
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6 col-md-6">
+                  <div class="mb-3">
+                    <input
+                      value="andrew"
+                      type="text"
+                      class="form-control"
+                      name="firstname"
+                      id="firstname"
+                      aria-describedby="helpId"
+                      placeholder="FirstName"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                  <div class="mb-3">
+                    <input
+                      value="andrew"
+                      type="text"
+                      class="form-control"
+                      name="lastname"
+                      id="lastname"
+                      aria-describedby="helpId"
+                      placeholder="LastName"
+                    />
+                  </div>
+                </div>
+                <!-- email , phone -->
+                <div class="col-sm-6 col-md-6">
+                  <div class="mb-3">
+                    <input
+                      value="abc@gmail.com"
+                      type="text"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      aria-describedby="helpId"
+                      placeholder="Email"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                  <div class="mb-3">
+                    <input
+                      value="+84"
+                      type="text"
+                      class="form-control"
+                      name="phone"
+                      id="phone"
+                      aria-describedby="helpId"
+                      placeholder="Phone"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>--danh sách ngành nghề liên quan--</option>
+                    <option value="1">FrontEnd</option>
+                    <option value="2">BackEnd</option>
+                    <option value="3">Full Stack Developer</option>
+                    <option value="4">Mobile Developer</option>
+                    <option value="5">Data Analyst</option>
+                    <option value="6">Data Scientist</option>
+                    <option value="7">Database Administrator</option>
+                    <option value="8">Cloud Computing Specialist</option>
+                    <option value="9">Cybersecurity Analyst</option>
+                    <option value="10">Network Administrator</option>
+                    <option value="11">DevOps Engineer</option>
+                    <option value="12">Artificial Intelligence Engineer</option>
+                    <option value="13">Machine Learning Engineer</option>
+                    <option value="14">Computer Vision Engineer</option>
+                    <option value="15">Game Developer</option>
+                    <option value="16">UI/UX Designer</option>
+                    <option value="17">Graphic Designer</option>
+                    <option value="18">Product Manager</option>
+                    <option value="19">Project Manager</option>
+                    <option value="20">Agile Coach</option>
+                    <option value="21">Technical Writer</option>
+                    <option value="22">IT Support Specialist</option>
+                    <option value="23">IT Consultant</option>
+                    <option value="24">Sales Engineer</option>
+                    <option value="25">Business Analyst</option>
+                    <option value="26">Quality Assurance Specialist</option>
+                    <option value="27">ERP Consultant</option>
+                    <option value="28">IT Trainer</option>
+                    <option value="29">IT Recruiter</option>
+                    <option value="30">IT Lawyer</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Huỷ thao tác
+            </button>
+            <button type="button" class="btn btn-success">Lưu nội dung</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! chỉnh sửa thông tin nội dung -->
+
+    <!-- ! modal liên quan đến xoá thông tin cá nhân  -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal_delete"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-danger fw-bold text-white">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Thao tác xoá thông tin người dùng
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h1 class="fw-bold text-danger">Cảnh báo quan trọng !</h1>
+            <br />
+            <p class="">
+              Bạn muốn xoá người dùng
+              <span class="text-warning fw-bold text-capitalize">andrew </span>?
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-danger"
+              data-bs-dismiss="modal"
+            >
+              Xoá
+            </button>
+            <button type="button" class="btn btn-warning">Huỷ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! modal liên quan đến xoá thông tin cá nhân  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
