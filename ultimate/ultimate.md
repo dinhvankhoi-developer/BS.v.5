@@ -31,3 +31,5 @@
    --ms-auto => end.
    -- me-auto => start
    # align-content ( dùng được khi có nhiều item )
+   # khi dùng flexbox trong bootstrap thì thiết lập như sau :
+   -- flex phải đặt lồng bên trong class => row => .col-$
