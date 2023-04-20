@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Title</title>
+  </head>
+  <body>
+    <!-- !navbar -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top bg-opacity-75"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand text-uppercase fw-bold text-danger \" href="#"
+            >blog2.0</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Home</a>
+              </li>
+              <!-- categories , posts , pages, search , default -->
+              <li class="nav-item">
+                <a class="nav-link" href="#">Categories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Posts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Search</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./default.html">Default</a>
+              </li>
+            </ul>
+
+            <form class="d-flex">
+              <div class="hstack gap-4">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <div class="vr text-white"></div>
+                <button class="btn btn-outline-success" type="submit">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- !navbar -->
+
+    <!-- !banner -->
+    <section class="banner-bg pt-5">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="banner-content text-center text-white pt-3">
+              <h3 class="text-capitalize">
+                điểm đến du lịch hấp dẫn tại việt nam
+              </h3>
+              <p class="text-success opacity-75 fw-bold pt-4 mb-4">
+                Khám phá những điểm đến mới, trải nghiệm những văn hóa độc đáo
+                và thưởng thức các món ăn địa phương là những trải nghiệm tuyệt
+                vời khi đi du lịch.
+              </p>
+              <br />
+              <a
+                href=""
+                class="btn btn-primary text-capitalize mb-5"
+                data-bs-toggle="modal"
+                data-bs-target="#link"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-envelope-at"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"
+                  />
+                  <path
+                    d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"
+                  />
+                </svg>
+                đăng kí chuyến thăm quan du lịch
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- !banner -->
+
+    <!-- !modal khi nhấn link -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="link"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header bg-success text-uppercase">
+            <h5 class="modal-title" id="exampleModalLabel">
+              đăng kí chuyến du lịch tại việt nam
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <!-- ! nội dung modal tại đây -->
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6 col-md-6">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                    />
+                    <div id="emailHelp" class="form-text">
+                      We'll never share your email with anyone else.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                  <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-4 mb-2">
+                <div class="col-sm-12 col-md-12">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>--danh sách điểm đến du lịch--</option>
+                    <option value="1">Vịnh Hạ Long</option>
+                    <option value="2">Sapa</option>
+                    <option value="3">Đà Nẵng - Hội An</option>
+                    <option value="4">Nha Trang</option>
+                    <option value="5">Phú Quốc</option>
+                    <option value="6">Đà Lạt</option>
+                    <option value="7">Huế</option>
+                    <option value="8">Đồng Tháp</option>
+                    <option value="9">Cần Thơ</option>
+                    <option value="10">Phan Thiết - Mũi Né</option>
+                    <option value="11">Cát Bà</option>
+                    <option value="12">Côn Đảo</option>
+                    <option value="13">Hà Giang</option>
+                    <option value="14">Quảng Bình - Phong Nha Kẻ Bàng</option>
+                    <option value="15">Cao Bằng</option>
+                    <option value="16">Điện Biên</option>
+                    <option value="17">
+                      Hà Nội - Thủ đô nghìn năm văn hiến
+                    </option>
+                    <option value="18">TP.HCM - Thành phố Hồ Chí Minh</option>
+                    <option value="19">Đồng Nai - Vũng Tàu</option>
+                    <option value="20">Củ Chi - Tunnels</option>
+                    <option value="21">Hải Phòng</option>
+                    <option value="22">Hòa Bình</option>
+                    <option value="23">Lào Cai - Bắc Hà</option>
+                    <option value="24">Lạng Sơn</option>
+                    <option value="25">Mai Châu - Hòa Bình</option>
+                    <option value="26">Mộc Châu - Sơn La</option>
+                    <option value="27">Nam Định</option>
+                    <option value="28">Ninh Bình - Tam Cốc - Bích Động</option>
+                    <option value="29">Phú Yên</option>
+                    <option value="30">Sa Pa - Lào Cai</option>
+                    <option value="31">Thái Bình</option>
+                    <option value="32">Thái Nguyên</option>
+                    <option value="33">Thanh Hóa - Bái Đính</option>
+                    <option value="34">Tiền Giang - Mỹ Tho</option>
+                    <option value="35">Vĩnh Long - Cần Thơ</option>
+                    <option value="36">Vũng Tàu</option>
+                    <option value="37">Yên Bái - Mù Cang Chải</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-12">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value=""
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    <a href="" class="text-decoration-underline text-primary"
+                      >Chấp nhận điều khoản trên .</a
+                    >
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !modal khi nhấn link -->
+
+    <!-- !posts -->
+    <div class="container-fluid">
+      <div class="row g-md-3 gy-3 ms-4 mt-5 gx-1">
+        <div class="d-flex justify-content-between flex-wrap flex-row gap-5">
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-sm col-md border-0">
+            <div class="card shadow-lg" style="width: 18rem">
+              <img
+                src="./assets/img/pexels-artūras-kokorevas-15658172.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Trải nghiệm thế giới qua du lịch</h5>
+                <p class="card-text">
+                  Du lịch là cách tuyệt vời để khám phá thế giới, tìm hiểu văn
+                  hóa và kết nối với con người
+                </p>
+                <a
+                  href="#"
+                  class="btn btn-warning text-white fw-bold text-uppercase d-block mx-auto rounded-pill"
+                  >read more ...</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !posts -->
+
+    <!-- !footer -->
+    <footer>
+      <div class="container-fluid">
+        <div class="row justify-content-center pt-4 bg-dark pb-5 mt-5">
+          <div class="col-md-12 text-center text-white align-middle pt-5">
+            <!-- <hr /> -->
+            <p>
+              &copy; Copyright 2023 <a href="#">All Rights Reserved</a> |
+              <a href="#">Related Links</a> | Website designed with
+              <i class="fas fa-heart"></i> by Endinslovel
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- !footer -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
