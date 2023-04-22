@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-gap: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        grid-template-areas:
+          "header header header header header header header"
+          "nav nav nav nav nav nav menu"
+          "one one"
+      }
+      .header {
+        grid-area: header;
+        background: navy;
+      }
+      .nav {
+        grid-area: nav;
+        background: orange;
+      }
+      .menu {
+        grid-area: menu;
+        background: red;
+      }
+      .one {
+        grid-area: one;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">header</div>
+      <div class="nav">nav</div>
+      <div class="menu">menu</div>
+      <div class="one">one</div>
+      <div class="two">two</div>
+      <div class="three">three</div>
+      <div class="four">four</div>
+      <div class="five">five</div>
+      <div class="six">six</div>
+      <div class="seven">seven</div>
+      <div class="aside">aside</div>
+      <div class="content">content</div>
+      <div class="article">article</div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>
