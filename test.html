@@ -2,56 +2,1513 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      .container {
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-gap: 10px;
-        text-align: center;
-        text-transform: uppercase;
-        grid-template-areas:
-          "header header header header header header header"
-          "nav nav nav nav nav nav menu"
-          "one one"
-      }
-      .header {
-        grid-area: header;
-        background: navy;
-      }
-      .nav {
-        grid-area: nav;
-        background: orange;
-      }
-      .menu {
-        grid-area: menu;
-        background: red;
-      }
-      .one {
-        grid-area: one;
-        background: blue;
-      }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Enter your description here" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Title</title>
   </head>
   <body>
-    <div class="container">
-      <div class="header">header</div>
-      <div class="nav">nav</div>
-      <div class="menu">menu</div>
-      <div class="one">one</div>
-      <div class="two">two</div>
-      <div class="three">three</div>
-      <div class="four">four</div>
-      <div class="five">five</div>
-      <div class="six">six</div>
-      <div class="seven">seven</div>
-      <div class="aside">aside</div>
-      <div class="content">content</div>
-      <div class="article">article</div>
-      <div class="footer">footer</div>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Disabled</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://dummyimage.com/1800x1200/dbdbdb/787878.png&text=Image+cap"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
+    <!-- !breadcurm -->
+    <div class="container-fluid mt-4">
+      <div class="row">
+        <div class="d-flex justify-content-start text-danger fw-bold">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Library</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Data</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <!-- !breadcurm -->
+
+    <!-- !main  -->
+    <div class="container-fluid">
+      <div class="row pt-3">
+        <div class="col-sm col-md-3">
+          <div class="list-group text-capitalize" id="nav">
+            <a
+              href="#home"
+              class="list-group-item list-group-item-action active"
+              aria-current="true"
+            >
+              home
+            </a>
+            <a href="#blog" class="list-group-item list-group-item-action"
+              >blog</a
+            >
+            <a href="#about" class="list-group-item list-group-item-action"
+              >about</a
+            >
+            <a href="#contact" class="list-group-item list-group-item-action"
+              >contact</a
+            >
+            <a href="#more" class="list-group-item list-group-item-action"
+              >more</a
+            >
+          </div>
+          <div class="list-group my-4">
+            <a
+              href="#"
+              class="list-group-item list-group-item-action active"
+              aria-current="true"
+            >
+              Nội dung theo những năm qua
+            </a>
+            <!-- ! 2018 - 2025 -->
+            <a href="#" class="list-group-item list-group-item-action">2018</a>
+            <a href="#" class="list-group-item list-group-item-action">2019</a>
+            <a href="#" class="list-group-item list-group-item-action">2020</a>
+            <a href="#" class="list-group-item list-group-item-action">2021</a>
+            <a href="#" class="list-group-item list-group-item-action">2022</a>
+            <a href="#" class="list-group-item list-group-item-action">2023</a>
+            <a href="#" class="list-group-item list-group-item-action">2024</a>
+            <a href="#" class="list-group-item list-group-item-action">2025</a>
+          </div>
+        </div>
+        <div class="col-sm col-md-9">
+          <div class="card">
+            <div class="card-header bg-primary fw-bold text-white">
+              Nội dung thông tin posts
+            </div>
+            <div
+              class="card-body overflow-scroll"
+              data-bs-spy="scroll"
+              data-bs-target="#nav"
+              data-bs-smooth="true"
+              data-bs-scroll="true"
+              data-bs-offset="0"
+              style="height: 10rem"
+            >
+              <h3 id="home">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </h3>
+              <p class="">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Doloremque assumenda dignissimos expedita sint placeat beatae et
+                vel, sunt ipsam asperiores animi! Doloribus placeat ut sit.
+                Velit non porro magni dolorem.
+              </p>
+              <h3 id="blog">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, eius.
+              </h3>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Aperiam consequuntur, laboriosam quia eaque ipsam sunt? Unde
+                iure, amet nemo totam voluptas id reprehenderit. Numquam ad
+                reiciendis iste amet rerum facilis ullam, magnam error velit
+                repellendus quisquam delectus porro. Ut mollitia quasi libero
+                nihil? Consequatur sint quasi possimus labore doloremque cumque!
+              </p>
+              <h3 id="about">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, eius.
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                molestias officiis saepe id. Reiciendis modi itaque, rerum natus
+                mollitia cumque, sint, nemo ad consectetur facilis provident?
+                Suscipit officia iusto et.
+              </p>
+              <h3 id="contact">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, eius.
+              </h3>
+              <p class="">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                repellendus minima quibusdam reprehenderit soluta perferendis
+                debitis, consequuntur obcaecati ad earum provident tenetur
+                tempora nostrum, labore quisquam, ullam atque veritatis!
+                Molestiae quasi, beatae dolore consectetur suscipit provident
+                eligendi soluta error quas vero nesciunt quod, architecto nisi a
+                placeat! Eveniet ad, libero sunt dolorem corrupti iusto porro
+                cumque itaque illo, hic suscipit!
+              </p>
+              <h3 id="more">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatibus, eius.
+              </h3>
+              <p class="">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit,
+                labore dolorem! Excepturi in sequi, fugiat optio qui esse! Ipsam
+                aliquam, quibusdam odio molestiae quas a explicabo qui sit quia,
+                quasi, facere porro possimus quos. Reprehenderit voluptates id
+                explicabo quo? Id dignissimos totam sunt repellendus nihil, sit,
+                odit earum dolor voluptas obcaecati consequuntur laboriosam
+                distinctio ex repudiandae delectus rerum. Sapiente illo quos
+                alias modi. Quasi assumenda necessitatibus eum iste. Accusamus,
+                aperiam!
+              </p>
+            </div>
+          </div>
+          <div
+            class="accordion accordion-flush my-4"
+            id="accordionFlushExample"
+          >
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the first item's accordion body.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Accordion Item #2
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the second item's accordion body. Let's imagine this being
+                  filled with some actual content.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Accordion Item #3
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the third item's accordion body. Nothing more exciting
+                  happening here in terms of content, but just filling up the
+                  space to make it look, at least at first glance, a bit more
+                  representative of how this would look in a real-world
+                  application.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFour"
+                >
+                  Accordion Item #4
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the third item's accordion body. Nothing more exciting
+                  happening here in terms of content, but just filling up the
+                  space to make it look, at least at first glance, a bit more
+                  representative of how this would look in a real-world
+                  application.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseFive"
+                >
+                  Accordion Item #5
+                </button>
+              </h2>
+              <div
+                id="flush-collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingFive"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the third item's accordion body. Nothing more exciting
+                  happening here in terms of content, but just filling up the
+                  space to make it look, at least at first glance, a bit more
+                  representative of how this would look in a real-world
+                  application.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSix">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSix"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseSix"
+                >
+                  Accordion Item #6
+                </button>
+              </h2>
+              <div
+                id="flush-collapseSix"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingSix"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the third item's accordion body. Nothing more exciting
+                  happening here in terms of content, but just filling up the
+                  space to make it look, at least at first glance, a bit more
+                  representative of how this would look in a real-world
+                  application.
+                </div>
+              </div>
+            </div>
+            <!-- accordion item 6 - 10  theo mẫu -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !main  -->
+    <!-- !content -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img
+                src="https://dummyimage.com/180x120/dbdbdb/787878.png&text=Image+cap"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  This is a longer card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- !content -->
+    <form action="" method="post">
+      <div class="container-fluid">
+        <div class="row mt-5">
+          <div class="col-sm col-md-6 rounded-3 mx-auto d-block">
+            <div class="card border-0 shadow-lg">
+              <div class="card-header bg-primary">Đăng kí để nhận tin tức</div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-sm col-md">
+                    <div class="mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        id="name"
+                        aria-describedby="helpId"
+                        placeholder="Tên"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm col-md">
+                    <div class="mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="name"
+                        id="name"
+                        aria-describedby="helpId"
+                        placeholder="Họ "
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row my-3">
+                  <div class="col-sm col-md">
+                    <div class="mb-3">
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="email"
+                        id="email"
+                        aria-describedby="helpId"
+                        placeholder="Email"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-sm col-md">
+                    <div class="mb-3">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="phone"
+                        id="phone"
+                        aria-describedby="helpId"
+                        placeholder="Số điện thoại"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-sm col-md">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>
+                        --Danh sách các công việc liên quan đến IT--
+                      </option>
+                      <option value="1">Lập trình viên Full-stack</option>
+                      <option value="2">Lập trình viên Front-end</option>
+                      <option value="3">Lập trình viên Back-end</option>
+                      <option value="4">Chuyên viên phát triển game</option>
+                      <option value="5">Chuyên gia bảo mật mạng</option>
+                      <option value="6">Kỹ sư cơ điện tử</option>
+                      <option value="7">Nhà phát triển ứng dụng di động</option>
+                      <option value="8">Kỹ sư truyền thông</option>
+                      <option value="9">Kỹ sư phần cứng máy tính</option>
+                      <option value="10">Nhà thiết kế đồ họa</option>
+                      <option value="11">Kỹ sư trình điều khiển</option>
+                      <option value="12">Chuyên viên phân tích dữ liệu</option>
+                      <option value="13">
+                        Chuyên viên phát triển phần mềm
+                      </option>
+                      <option value="14">Kỹ sư trực tuyến</option>
+                      <option value="15">Kỹ sư phần mềm nhúng</option>
+                      <option value="16">Nhà phát triển web</option>
+                      <option value="17">Chuyên viên hỗ trợ kỹ thuật</option>
+                      <option value="18">Chuyên viên kiểm thử</option>
+                      <option value="19">Kỹ sư Internet of Things (IoT)</option>
+                      <option value="20">Kỹ sư truyền thông không dây</option>
+                      <option value="21">
+                        Chuyên viên phát triển phần mềm Java
+                      </option>
+                      <option value="22">Kỹ sư truyền thông đám mây</option>
+                      <option value="23">Nhà phát triển game di động</option>
+                      <option value="24">Kỹ sư thử nghiệm</option>
+                      <option value="25">
+                        Chuyên viên phát triển phần mềm .NET
+                      </option>
+                      <option value="26">Kỹ sư an toàn thông tin</option>
+                      <option value="27">Kỹ sư phần mềm nhúng</option>
+                      <option value="28">Nhà phát triển Python</option>
+                      <option value="29">
+                        Chuyên viên phát triển phần mềm Ruby
+                      </option>
+                      <option value="30">Kỹ sư phần mềm máy tính</option>
+                      <option value="31">
+                        Chuyên viên quản lý cơ sở dữ liệu
+                      </option>
+                      <option value="32">Kỹ sư phần mềm ERP</option>
+                      <option value="33">
+                        Chuyên viên phát triển phần mềm C++
+                      </option>
+                      <option value="34">Kỹ sư mạng</option>
+                      <option value="35">Kỹ sư thử nghiệm</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm col-md">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="checbox"
+                      />
+                      <label class="form-check-label" for="checbox">
+                        <a
+                          href="#"
+                          class="text-decoration-underline text-danger opacity-75"
+                          >Đồng ý các điều khoản trên .</a
+                        >
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="row my-4">
+                  <div class="col-sm col-md">
+                    <div class="d-grid gap-2">
+                      <button
+                        type="button"
+                        name="submit"
+                        id="submit"
+                        class="btn btn-success fw-bold text-white-75 text-capitalize"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-envelope-check"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"
+                          />
+                          <path
+                            d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"
+                          />
+                        </svg>
+                        to sent email
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm col-md position-relative">
+          <img
+            src="./assets/img/pexels-ozan-çulha-16337978.jpg"
+            class="img-thumbnail rounded-circle fixed-bottom mx-3"
+            type="button"
+            onclick="showToast()"
+            class="btn btn-primary"
+            id="liveToastBtn"
+            alt="chat"
+            style="height: 3.125rem; width: 3.125rem"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- ! toast -->
+
+    <div class="container-fluid">
+      <div class="row my-5">
+        <div class="col-sm col-md border-0">
+          <div class="card">
+            <div class="card-header bg-info text-center fw-bold text-white">
+              Phần thông tin đăng nhập
+            </div>
+            <div class="card-body">
+              <div class="row my-4">
+                <form action="" method="post">
+                  <div class="col-sm col-md">
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label"
+                        >Email address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                      />
+                      <div id="emailHelp" class="form-text">
+                        We'll never share your email with anyone else.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm col-md">
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label"
+                        >Password</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                        aria-describedby="passwordHelp"
+                      />
+                      <div id="passwordHelp" class="form-text">
+                        We'll never share your password with anyone else.
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="row">
+                <div class="d-grid gap-2">
+                  <button
+                    type="button"
+                    name="login"
+                    id="login"
+                    class="btn btn-success"
+                  >
+                    Đăng nhập
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm col-md">
+          <div class="card">
+            <div class="card-header bg-warning fw-bold text-center">
+              Cần hỗ trợ liên lạc
+            </div>
+            <div class="card-body">
+              <form action="" method="post">
+                <div class="row">
+                  <div class="col-sm col-md">
+                    <div class="mb-3">
+                      <label for="" class="form-label">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name=""
+                        id=""
+                        aria-describedby="helpId"
+                        placeholder=""
+                      />
+                      <small id="helpId" class="form-text text-muted"
+                        >Help text</small
+                      >
+                    </div>
+                  </div>
+                  <div class="col-sm col-md">
+                    <div class="mb-3">
+                      <label for="" class="form-label">Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name=""
+                        id=""
+                        aria-describedby="helpId"
+                        placeholder="Email"
+                      />
+                      <small id="helpId" class="form-text text-muted"
+                        >Help text</small
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm col-md">
+                    <div class="d-grid gap-2">
+                      <button
+                        type="button"
+                        name="submit"
+                        id="submit"
+                        class="btn btn-success text-capitalize"
+                        data-bs-toggle="modal"
+                        data-bs-target="#support"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-envelope-check"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"
+                          />
+                          <path
+                            d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"
+                          />
+                        </svg>
+                        hỗ trợ
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! toast -->
+
+    <!-- ! modal khi nhấn hỗ trợ  .  -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="support"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! modal khi nhấn hỗ trợ  .  -->
+
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+      <div
+        id="liveToast"
+        class="toast hide"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
+        <div class="toast-header">
+          <img src="..." class="rounded me-2" alt="..." />
+          <strong class="me-auto">Bootstrap</strong>
+          <small>11 mins ago</small>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="toast-body">Hello, world! This is a toast message.</div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="container-fluid">
+        <div class="row my-5">
+          <div class="col-sm col-md"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ! đọc nội dung từ posts -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm col-md">
+          <div class="d-flex justify-content-evenly flex-row flex-wrap">
+            <p>
+              <a
+                class="btn btn-primary"
+                data-bs-toggle="collapse"
+                href="#multiCollapseExample1"
+                role="button"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample1"
+                >Tin Tức</a
+              >
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#multiCollapseExample2"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample2"
+              >
+                Kinh Danh
+              </button>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#multiCollapseExample3"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample3"
+              >
+                Chiến Lượt
+              </button>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#multiCollapseExample4"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample4"
+              >
+                Kinh Danh
+              </button>
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target=".multi-collapse"
+                aria-expanded="false"
+                aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3 multiCollapseExample4"
+              >
+                Xem tất cả nội dung
+              </button>
+            </p>
+          </div>
+          <div class="row g-3">
+            <div class="col-sn col-md">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nihil, tenetur distinctio ab incidunt magni minima nesciunt
+                  reprehenderit velit. Perspiciatis odit consectetur quia
+                  maiores veritatis voluptate dolore debitis error nam libero,
+                  corporis reiciendis quis blanditiis? Cum et nihil optio
+                  expedita animi nam architecto unde, consectetur ut, reiciendis
+                  inventore numquam, sunt natus.
+                </div>
+              </div>
+            </div>
+            <div class="col-sn col-md">
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+                <div class="card card-body">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Itaque similique in ipsum assumenda hic reiciendis quo quae
+                  temporibus repudiandae vero. Quos, numquam harum? Obcaecati
+                  aperiam atque praesentium facilis, deserunt, cupiditate
+                  recusandae neque est quo aliquid debitis sapiente suscipit
+                  ipsa veniam reiciendis cumque rem dolorum corporis illo ab
+                  labore nulla ut? Quia, rerum dolore cum adipisci expedita eius
+                  rem reprehenderit dolores! Architecto assumenda saepe
+                  molestiae ratione tenetur, odio porro dolores vitae!
+                </div>
+              </div>
+            </div>
+            <div class="col-sn col-md">
+              <div class="collapse multi-collapse" id="multiCollapseExample3">
+                <div class="card card-body">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Itaque similique in ipsum assumenda hic reiciendis quo quae
+                  temporibus repudiandae vero. Quos, numquam harum? Obcaecati
+                  aperiam atque praesentium facilis, deserunt, cupiditate
+                  recusandae neque est quo aliquid debitis sapiente suscipit
+                  ipsa veniam reiciendis cumque rem dolorum corporis illo ab
+                  labore nulla ut? Quia, rerum dolore cum adipisci expedita eius
+                  rem reprehenderit dolores! Architecto assumenda saepe
+                  molestiae ratione tenetur, odio porro dolores vitae!
+                </div>
+              </div>
+            </div>
+            <div class="col-sn col-md">
+              <div class="collapse multi-collapse" id="multiCollapseExample4">
+                <div class="card card-body">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Itaque similique in ipsum assumenda hic reiciendis quo quae
+                  temporibus repudiandae vero. Quos, numquam harum? Obcaecati
+                  aperiam atque praesentium facilis, deserunt, cupiditate
+                  recusandae neque est quo aliquid debitis sapiente suscipit
+                  ipsa veniam reiciendis cumque rem dolorum corporis illo ab
+                  labore nulla ut? Quia, rerum dolore cum adipisci expedita eius
+                  rem reprehenderit dolores! Architecto assumenda saepe
+                  molestiae ratione tenetur, odio porro dolores vitae!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm col-md">
+          <div class="card">
+            <div class="card-header bg-success">Danh sách các api miễn phí</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table
+                  class="table table-striped table-hover table-bordered table-primary align-middle"
+                >
+                  <thead class="table-light">
+                    <!-- <caption>Table Name</caption> -->
+                    <tr class="text-capitalize text-center fw-bold">
+                      <th scope="col">api</th>
+                      <th scope="col">description</th>
+                      <th scope="col">auth</th>
+                      <th scope="col">https</th>
+                      <th scope="col">cors</th>
+                      <th scope="col">link</th>
+                      <th scope="col">category</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-group-divider">
+                    <tr class="table-primary"></tr>
+                  </tbody>
+                  <tfoot></tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! đọc nội dung từ posts -->
+    <!-- ! danh sách lựa chọn các sản phẩm  -->
+    <div class="container-fluid">
+      <div class="row my-5">
+        <div class="col-sm col-md-6 d-md-block mx-md-auto">
+          <div class="card border-0 shadow-lg">
+            <div class="card-header bg-success fw-bold text-center">
+              Danh sách chọn lọc
+            </div>
+          </div>
+          <div class="list-group">
+            <label class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" />
+              Lập trình ứng dụng di động
+            </label>
+            <label class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" />
+              Phát triển phần mềm
+            </label>
+            <label class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" />
+              Quản trị mạng máy tính
+            </label>
+            <label class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" />
+              An toàn thông tin
+            </label>
+            <label class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" />
+              Thiết kế đồ họa và phát triển trò chơi
+            </label>
+            <label class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" />
+              Khoa học dữ liệu và trí tuệ nhân tạo
+            </label>
+            <label class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" />
+              Thương mại điện tử
+            </label>
+            <label class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" />
+              Truyền thông số và quản lý nội dung
+            </label>
+            <label class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" />
+              Khai thác dữ liệu và xử lý tín hiệu số
+            </label>
+            <label class="list-group-item">
+              <input class="form-check-input me-1" type="checkbox" value="" />
+              Truyền thông và mạng máy tính
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ! danh sách lựa chọn các sản phẩm  -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm col-md-4 d-md-block mx-md-auto">
+          <div class="card border-0 shadow-lg">
+            <div class="card-header bg-success fw-bold text-center">
+              Chọn mẫu xe nổi tiếng
+            </div>
+            <div class="list-group">
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Honda
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Toyota
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                BMW
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Mercedes-Benz
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Ford
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Chevrolet
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Nissan
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Audi
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Volkswagen
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Tesla
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Ferrari
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Lamborghini
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Porsche
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Mazda
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Hyundai
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Kia
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Subaru
+              </label>
+              <label class="list-group-item">
+                <input
+                  class="form-check-input me-1"
+                  type="radio"
+                  name="list-radio"
+                  value=""
+                />
+                Fiat
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row my-5">
+        <div
+          class="col-sm col-md-6 d-md-block mx-md-auto rounded-3 border-0 shadow-lg"
+        >
+          <div class="card border-0" aria-hidden="true">
+            <img
+              class="card-img-top"
+              src="holder.js/100x180/placeholder"
+              alt="Some text"
+            />
+            <div class="card-body">
+              <h5 class="card-title placeholder-wave">
+                <span class="placeholder col-6">Some text</span>
+              </h5>
+              <p class="card-text placeholder-wave">
+                <span class="placeholder col-7">Some text</span>
+                <span class="placeholder col-4 bg-danger text-danger"
+                  >Some text</span
+                >
+                <span class="placeholder col-4 bg-danger text-danger"
+                  >Some text</span
+                >
+                <span class="placeholder col-6">Some text</span>
+                <span class="placeholder col-8 bg-success text-success"
+                  >Some text</span
+                >
+              </p>
+              <a
+                href="#"
+                tabindex="-1"
+                class="btn btn-primary disabled placeholder col-6"
+                >Đang tải nội dung</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-5">
+        <div
+          class="col-sm col-md-6 d-md-block mx-md-auto rounded-3 border-0 shadow-lg"
+        >
+          <div class="card border-0" aria-hidden="true">
+            <img
+              class="card-img-top"
+              src="holder.js/100x180/placeholder"
+              alt="Some text"
+            />
+            <div class="card-body">
+              <h5 class="card-title placeholder-wave">
+                <span class="placeholder col-6">Some text</span>
+              </h5>
+              <p class="card-text placeholder-wave">
+                <span class="placeholder col-7">Some text</span>
+                <span class="placeholder col-4 bg-danger text-danger"
+                  >Some text</span
+                >
+                <span class="placeholder col-4 bg-danger text-danger"
+                  >Some text</span
+                >
+                <span class="placeholder col-6">Some text</span>
+                <span class="placeholder col-8 bg-success text-success"
+                  >Some text</span
+                >
+              </p>
+              <a
+                href="#"
+                tabindex="-1"
+                class="btn btn-primary disabled placeholder col-6"
+                >Đang tìm kiếm thông tin</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row my-5">
+        <div
+          class="col-sm col-md-6 d-md-block mx-md-auto rounded-3 border-0 shadow-lg"
+        >
+          <div class="card border-0" aria-hidden="true">
+            <img
+              class="card-img-top"
+              src="holder.js/100x180/placeholder"
+              alt="Some text"
+            />
+            <div class="card-body">
+              <h5 class="card-title placeholder-wave">
+                <span class="placeholder col-6">Some text</span>
+              </h5>
+              <p class="card-text placeholder-wave">
+                <span class="placeholder col-7">Some text</span>
+                <span class="placeholder col-4 bg-danger text-danger"
+                  >Some text</span
+                >
+                <span class="placeholder col-4 bg-danger text-danger"
+                  >Some text</span
+                >
+                <span class="placeholder col-6">Some text</span>
+                <span class="placeholder col-8 bg-success text-success"
+                  >Some text</span
+                >
+              </p>
+              <a
+                href="#"
+                tabindex="-1"
+                class="btn btn-primary disabled placeholder col-6"
+                >Tải dữ liệu
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm col-md"></div>
+      </div>
+    </div>
+
+    <!-- Call this script after bootstrap.bundle.min.js CDN -->
+    <script>
+      function showToast() {
+        var toastDOMElement = document.getElementById("liveToast");
+        var myToast = new bootstrap.Toast(toastDOMElement);
+        myToast.show();
+      }
+
+      //  lấy dữ liệu từ api rồi render ra table
+      const table = document.querySelector("table");
+      const tbody = table.querySelector("tbody");
+      const url = `https://api.publicapis.org/entries`;
+
+      const callApi = async () => {
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          console.log(data.entries);
+          console.log(Array.isArray(data.entries));
+          // render ra table
+          tbody.innerHTML = `
+      ${data.entries
+        .map(
+          (entry) => `
+            <tr>
+              <td>${entry.API}</td>
+              <td>${entry.Description}</td>
+              <td>${entry.Auth}</td>
+              <td>${entry.HTTPS}</td>
+              <td>${entry.Cors}</td>
+              <td>${entry.Link}</td>
+              <td>${entry.Category}</td>
+            </tr>
+          `
+        )
+        .join("")}
+    `;
+        } catch (error) {
+          throw new Error(error.message);
+        }
+      };
+
+      callApi();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
   </body>
 </html>
